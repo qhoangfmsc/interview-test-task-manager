@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-import { taskList } from "../config/taskList";
+import { taskList } from "../config/task/taskList";
 
 const TaskListContext = createContext(undefined);
 

@@ -2,7 +2,7 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import { taskConfig } from "../config/taskConfig";
+import { taskConfig } from "../config/task/taskConfig";
 import TaskBoard from "./TaskBoard";
 import { filterTasksByStatus } from "../utils/utils";
 

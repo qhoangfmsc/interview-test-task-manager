@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ActionsDataGrid from "../components/ActionsDataGrid";
 
 function TaskManagement() {
   return (
-    <div>TaskManagement</div>
-  )
+    <>
+      <ActionsDataGrid />
+    </>
+  );
 }
 
-export default TaskManagement
+export default TaskManagement;

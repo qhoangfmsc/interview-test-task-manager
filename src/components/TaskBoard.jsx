@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { Box, Typography } from "@mui/material";
-import { taskConfig } from "../config/taskConfig";
+import { taskConfig } from "../config/task/taskConfig";
 import TaskCard from "./TaskCard";
 
 const TaskBoard = ({ taskList, statusTab = "All" }) => {
@@ -69,7 +69,10 @@ const TaskBoard = ({ taskList, statusTab = "All" }) => {
                     <Box
                       key={task.title}
                       sx={{
-                        width: `calc(calc(33.333% * ${filteredStatusList.length}) - 16px)`,
+                        width: {
+                          md: "100%",
+                          lg: `calc(calc(33.333% * ${filteredStatusList.length}) - 16px)`,
+                        },
                         minWidth: "250px",
                       }}
                     >

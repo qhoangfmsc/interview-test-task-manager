@@ -11,14 +11,14 @@ import {
   AvatarGroup,
 } from "@mui/material";
 import { grey, indigo } from "@mui/material/colors";
-import { taskConfig } from "../config/taskConfig";
-import { config } from "../config/config";
+import { taskConfig } from "../config/task/taskConfig";
 import { useColorMode } from "../contexts/ThemeContext";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import AdsClickIcon from "@mui/icons-material/AdsClick";
 import EventIcon from "@mui/icons-material/Event";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
 import { formatDateMMMMDDYYYY, getRemainingDays } from "../utils/utils";
+import { accountList } from "../config/account/accountList";
 
 const TaskCard = ({ task }) => {
   const { mode } = useColorMode();
@@ -35,12 +35,12 @@ const TaskCard = ({ task }) => {
         borderRadius: 2,
         borderWidth: 1,
         borderStyle: "solid",
-        borderColor: mode === "light" ? indigo[100] : grey[800],
+        borderColor: mode === "light" ? indigo[100] : grey[900],
       }}
     >
       <Typography variant="subtitle1" fontWeight={600}>
         <Typography variant="caption" color="text.secondary">
-          #{task.tid}.&nbsp;
+          #{task.id}.&nbsp;
         </Typography>
         {task.title}
       </Typography>
@@ -119,7 +119,7 @@ const TaskCard = ({ task }) => {
       <Stack direction="row" justifyContent="space-between" spacing={1} mt={2}>
         <AvatarGroup max={task.assignees.length}>
           {task.assignees.map((uid) => {
-            const user = config.accounts.find((account) => account.uid === uid);
+            const user = accountList.find((account) => account.uid === uid);
             return (
               <Avatar alt={user?.username} sx={{ width: 24, height: 24 }}>
                 <Tooltip title={user?.username} key={uid} placement="top">

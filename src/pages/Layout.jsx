@@ -1,11 +1,10 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import AsideDrawer from "../components/AsideDrawer";
-import { Outlet } from "react-router";
-import { config } from "../config/config";
 import MyAppBar from "../components/AppBar";
+import { Outlet } from "react-router";
 import { Toolbar } from "@mui/material";
+import { config } from "../config/system/config";
 
 function Layout(props) {
   const { window } = props;

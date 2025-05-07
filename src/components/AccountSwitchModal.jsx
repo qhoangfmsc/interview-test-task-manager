@@ -8,9 +8,9 @@ import ListItemText from "@mui/material/ListItemText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import { blue } from "@mui/material/colors";
-import { config } from "../config/config";
 import { alpha, Typography } from "@mui/material";
 import { enqueueSnackbar } from "notistack";
+import { accountList } from "../config/account/accountList";
 
 function AccountSwitchModal({ onClose, selectedValue, open }) {
   const handleClose = () => {
@@ -35,7 +35,7 @@ function AccountSwitchModal({ onClose, selectedValue, open }) {
           },
         }}
       >
-        {config.accounts.map((account) => (
+        {accountList.map((account) => (
           <ListItem disablePadding key={account.uid}>
             <ListItemButton onClick={() => handleListItemClick(account)}>
               <ListItemAvatar>

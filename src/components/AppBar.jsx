@@ -4,7 +4,7 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
-import { config } from "../config/config";
+import { config } from "../config/system/config";
 import { useLocation } from "react-router";
 import { useColorMode } from "../contexts/ThemeContext";
 import { Box, Button } from "@mui/material";

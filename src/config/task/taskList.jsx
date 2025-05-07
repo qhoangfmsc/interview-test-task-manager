@@ -1,6 +1,6 @@
 export const taskList = [
   {
-    tid: 0,
+    id: 0,
     title: "Create Home screen ERP Website",
     description: "",
     tags: ["DevOps", "BackEnd"],
@@ -17,7 +17,7 @@ export const taskList = [
     dueDate: "2025-05-06"
   },
   {
-    tid: 1,
+    id: 1,
     title: "Desk Research about market of fitness",
     description: "",
     tags: ["BackEnd"],
@@ -32,7 +32,7 @@ export const taskList = [
     dueDate: "2025-05-12"
   },
   {
-    tid: 2,
+    id: 2,
     title: "Create Log in/ Log out ERP Website",
     description: "",
     tags: ["Research", "BackEnd"],
@@ -49,7 +49,7 @@ export const taskList = [
     dueDate: "2025-05-01"
   },
   {
-    tid: 3,
+    id: 3,
     title: "Create Walkthrough screens",
     description: "",
     tags: ["Task"],
@@ -64,7 +64,7 @@ export const taskList = [
     dueDate: "2025-05-03"
   },
   {
-    tid: 4,
+    id: 4,
     title: "Plan to interview 15 users",
     description: "",
     tags: ["Research"],
@@ -79,7 +79,7 @@ export const taskList = [
     dueDate: "2025-05-09"
   },
   {
-    tid: 5,
+    id: 5,
     title: "Plan to survey 80 users",
     description: "",
     tags: ["Research", "Task"],
@@ -95,7 +95,7 @@ export const taskList = [
     dueDate: "2025-05-09"
   },
   {
-    tid: 6,
+    id: 6,
     title: "Conduct analysis of Godomo's competitors",
     description: "",
     tags: ["Research"],
@@ -111,7 +111,7 @@ export const taskList = [
     dueDate: "2025-05-07"
   },
   {
-    tid: 7,
+    id: 7,
     title: "3 Demo concepts for Home page",
     description: "",
     tags: ["Deploy", "Task"],
@@ -127,7 +127,7 @@ export const taskList = [
     dueDate: "2025-05-11"
   },
   {
-    tid: 8,
+    id: 8,
     title: "Synthesize data from interviews and surveys",
     description: "",
     tags: ["Research", "Task", "BackEnd"],

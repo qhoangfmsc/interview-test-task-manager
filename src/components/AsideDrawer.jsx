@@ -6,7 +6,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { config } from "../config/config";
+import { config } from "../config/system/config";
 import { alpha, Avatar, Box, Toolbar, Typography } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router";
 

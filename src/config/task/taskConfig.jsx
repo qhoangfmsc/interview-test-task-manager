@@ -26,7 +26,7 @@ export const taskConfig = {
     },
   ],
   priority: [
-    { sid: 0, status: "All", value: "all", color: "primary.main" },
+    { pid: 0, priority: "All", value: "all", color: "primary.main" },
     { pid: 1, priority: "Low", value: "low", color: "#919191" },
     { pid: 2, priority: "Medium", value: "medium", color: "warning.light" },
     { pid: 3, priority: "High", value: "high", color: "error.light" },
