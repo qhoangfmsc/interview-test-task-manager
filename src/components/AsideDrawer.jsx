@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Drawer from "@mui/material/Drawer";
 import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
@@ -7,7 +7,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { config } from "../config/config";
-import { Avatar, Box, Toolbar, Typography } from "@mui/material";
+import { alpha, Avatar, Box, Toolbar, Typography } from "@mui/material";
 import { Link, useLocation, useNavigate } from "react-router";
 
 const AsideDrawer = ({
@@ -43,12 +43,12 @@ const AsideDrawer = ({
                   {page.type === "title" && (
                     <Typography
                       sx={{
-                        color: "text.secondary",
+                        color: (theme) => alpha(theme.palette.text.primary, 0.55),
                         px: 2,
                         textTransform: "uppercase",
                         fontWeight: "bold",
-                        fontSize: "11px",
-                        letterSpacing: 1,
+                        fontSize: "0.6rem",
+                        letterSpacing: 2,
                       }}
                     >
                       {page.name}
@@ -125,4 +125,4 @@ const AsideDrawer = ({
     </>
   );
 };
-export default AsideDrawer;
+export default memo(AsideDrawer);

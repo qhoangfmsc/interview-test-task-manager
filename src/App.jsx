@@ -7,6 +7,8 @@ import Dashboard from "./pages/Dashboard";
 import TeamTasks from "./pages/TeamTasks";
 import PersonalTasks from "./pages/PersonalTasks";
 import { ColorModeProvider } from "./contexts/ThemeContext";
+import { SnackbarProvider } from "notistack";
+import { UserProvider } from "./contexts/UserContext";
 
 const AppContent = () => (
   <Routes>
@@ -25,7 +27,17 @@ function App() {
   return (
     <BrowserRouter>
       <ColorModeProvider>
-        <AppContent />
+        <SnackbarProvider
+          maxSnack={5}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "right",
+          }}
+        >
+          <UserProvider>
+            <AppContent />
+          </UserProvider>
+        </SnackbarProvider>
       </ColorModeProvider>
     </BrowserRouter>
   );

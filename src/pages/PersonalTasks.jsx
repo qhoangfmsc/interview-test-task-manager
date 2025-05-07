@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useMemo } from "react";
+import TaskTab from "../components/TaskTab";
+import { taskList } from "../config/taskList";
+import { useUser } from "../contexts/UserContext";
 
 function PersonalTasks() {
-  return (
-    <div>PersonalTasks</div>
-  )
+  const { user } = useUser();
+  const personalTaskList = useMemo(
+    () => taskList.filter((task) => task.assignees.includes(user.uid)),
+    [user]
+  );
+
+  return <TaskTab taskList={personalTaskList} />;
 }
 
-export default PersonalTasks
+export default PersonalTasks;

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
+import TaskTab from "../components/TaskTab";
+import { taskList } from "../config/taskList";
 
 function TeamTasks() {
-  return (
-    <div>TeamTasks</div>
-  )
+  return <TaskTab taskList={taskList} />;
 }
 
-export default TeamTasks
+export default TeamTasks;

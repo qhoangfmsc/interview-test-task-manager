@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -10,6 +10,7 @@ import { useColorMode } from "../contexts/ThemeContext";
 import { Box, Button } from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import AccountDialog from "./AccountDialog";
 
 const MyAppBar = ({ handleDrawerToggle }) => {
   const location = useLocation();
@@ -58,12 +59,13 @@ const MyAppBar = ({ handleDrawerToggle }) => {
             {config.routes[currentPath]}
           </Typography>
         </Box>
-        <Box>
+        <Box sx={{ display: "flex", gap: 1 }}>
           <ThemeToggleButton />
+          <AccountDialog />
         </Box>
       </Toolbar>
     </AppBar>
   );
 };
 
-export default MyAppBar;
+export default memo(MyAppBar);
