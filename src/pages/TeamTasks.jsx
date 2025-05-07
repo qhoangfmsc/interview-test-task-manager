@@ -1,8 +1,9 @@
 import React from "react";
 import TaskTab from "../components/TaskTab";
-import { taskList } from "../config/taskList";
+import { useTaskList } from "../contexts/TaskListContext";
 
 function TeamTasks() {
+  const { taskList } = useTaskList();
   return <TaskTab taskList={taskList} />;
 }
 

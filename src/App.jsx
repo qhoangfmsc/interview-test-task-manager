@@ -9,6 +9,7 @@ import PersonalTasks from "./pages/PersonalTasks";
 import { ColorModeProvider } from "./contexts/ThemeContext";
 import { SnackbarProvider } from "notistack";
 import { UserProvider } from "./contexts/UserContext";
+import { TaskListProvider } from "./contexts/TaskListContext";
 
 const AppContent = () => (
   <Routes>
@@ -35,7 +36,9 @@ function App() {
           }}
         >
           <UserProvider>
-            <AppContent />
+            <TaskListProvider>
+              <AppContent />
+            </TaskListProvider>
           </UserProvider>
         </SnackbarProvider>
       </ColorModeProvider>
