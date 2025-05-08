@@ -11,14 +11,14 @@ import {
   AvatarGroup,
 } from "@mui/material";
 import { grey, indigo } from "@mui/material/colors";
-import { taskConfig } from "../config/task/taskConfig";
-import { useColorMode } from "../contexts/ThemeContext";
+import { taskConfig } from "../../config/task/taskConfig";
+import { useColorMode } from "../../contexts/ThemeContext";
 import AdsClickIcon from "@mui/icons-material/AdsClick";
 import EventIcon from "@mui/icons-material/Event";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
-import { formatDateMMMMDDYYYY, getRemainingDays } from "../utils/utils";
+import { formatDateMMMMDDYYYY, getRemainingDays } from "../../utils/utils";
 import { Link } from "react-router";
-import { useAccountList } from "../contexts/AccountListContext";
+import { useAccountList } from "../../contexts/AccountListContext";
 
 const TaskCard = ({ task }) => {
     const { accountList } = useAccountList();

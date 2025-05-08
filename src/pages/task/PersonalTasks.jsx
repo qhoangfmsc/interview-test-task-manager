@@ -1,8 +1,7 @@
 import React, { useMemo } from "react";
-import TaskList from "../../components/TaskList";
+import TaskList from "../../components/task/TaskList";
 import { useUser } from "../../contexts/UserContext";
 import { useTaskList } from "../../contexts/TaskListContext";
-import { Box } from "@mui/material";
 
 function PersonalTasks() {
   const { user } = useUser();

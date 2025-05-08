@@ -13,10 +13,10 @@ import {
   ListItemAvatar,
 } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import { taskConfig } from "../config/task/taskConfig";
-import { formatDateMMMMDDYYYY } from "../utils/utils";
-import PrettoSlider from "./PrettoSlider";
-import { useAccountList } from "../contexts/AccountListContext";
+import { taskConfig } from "../../config/task/taskConfig";
+import { formatDateMMMMDDYYYY } from "../../utils/utils";
+import PrettoSlider from "../PrettoSlider";
+import { useAccountList } from "../../contexts/AccountListContext";
 
 const TaskDetailsView = ({ initialTask }) => {
     const { accountList } = useAccountList();

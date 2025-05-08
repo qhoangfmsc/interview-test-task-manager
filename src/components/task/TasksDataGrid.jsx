@@ -2,14 +2,14 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import { DataGrid } from "@mui/x-data-grid";
 import Button from "@mui/material/Button";
-import { useTaskList } from "../contexts/TaskListContext";
+import { useTaskList } from "../../contexts/TaskListContext";
 import { grey, indigo } from "@mui/material/colors";
-import { useColorMode } from "../contexts/ThemeContext";
-import { datagridConfig } from "../config/task/datagridConfig";
+import { useColorMode } from "../../contexts/ThemeContext";
+import { datagridConfig } from "../../config/task/datagridConfig";
 import TaskAsideDrawer from "./TaskAsideDrawer";
 import AutoCompleteTaskSearch from "./AutoCompleteTaskSearch";
 import { useNavigate } from "react-router";
-import { useAccountList } from "../contexts/AccountListContext";
+import { useAccountList } from "../../contexts/AccountListContext";
 
 export default function TasksDataGrid() {
   const { accountList } = useAccountList();

@@ -1,0 +1,296 @@
+[
+  {
+    "year": 2020,
+    "quarters": [
+      {
+        "quarter": "Q1",
+        "totalRevenue": 250000,
+        "operatingCost": 190000,
+        "profit": 60000,
+        "profitMargin": 24.0,
+        "products": [
+          { "name": "App A", "revenue": 100000 },
+          { "name": "Service B", "revenue": 80000 },
+          { "name": "Platform C", "revenue": 70000 }
+        ]
+      },
+      {
+        "quarter": "Q2",
+        "totalRevenue": 280000,
+        "operatingCost": 210000,
+        "profit": 70000,
+        "profitMargin": 25.0,
+        "products": [
+          { "name": "App A", "revenue": 110000 },
+          { "name": "Service B", "revenue": 100000 },
+          { "name": "Platform C", "revenue": 70000 }
+        ]
+      },
+      {
+        "quarter": "Q3",
+        "totalRevenue": 310000,
+        "operatingCost": 230000,
+        "profit": 80000,
+        "profitMargin": 25.8,
+        "products": [
+          { "name": "App A", "revenue": 120000 },
+          { "name": "Service B", "revenue": 110000 },
+          { "name": "Platform C", "revenue": 80000 }
+        ]
+      },
+      {
+        "quarter": "Q4",
+        "totalRevenue": 360000,
+        "operatingCost": 250000,
+        "profit": 110000,
+        "profitMargin": 30.6,
+        "products": [
+          { "name": "App A", "revenue": 170000 },
+          { "name": "Service B", "revenue": 110000 },
+          { "name": "Platform C", "revenue": 80000 }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "quarters": [
+      {
+        "quarter": "Q1",
+        "totalRevenue": 400000,
+        "operatingCost": 280000,
+        "profit": 120000,
+        "profitMargin": 30.0,
+        "products": [
+          { "name": "App A", "revenue": 160000 },
+          { "name": "Service B", "revenue": 140000 },
+          { "name": "Platform C", "revenue": 100000 }
+        ]
+      },
+      {
+        "quarter": "Q2",
+        "totalRevenue": 460000,
+        "operatingCost": 300000,
+        "profit": 160000,
+        "profitMargin": 34.8,
+        "products": [
+          { "name": "App A", "revenue": 180000 },
+          { "name": "Service B", "revenue": 150000 },
+          { "name": "Platform C", "revenue": 130000 }
+        ]
+      },
+      {
+        "quarter": "Q3",
+        "totalRevenue": 520000,
+        "operatingCost": 360000,
+        "profit": 160000,
+        "profitMargin": 30.8,
+        "products": [
+          { "name": "App A", "revenue": 200000 },
+          { "name": "Service B", "revenue": 180000 },
+          { "name": "Platform C", "revenue": 140000 }
+        ]
+      },
+      {
+        "quarter": "Q4",
+        "totalRevenue": 620000,
+        "operatingCost": 420000,
+        "profit": 200000,
+        "profitMargin": 32.3,
+        "products": [
+          { "name": "App A", "revenue": 250000 },
+          { "name": "Service B", "revenue": 200000 },
+          { "name": "Platform C", "revenue": 170000 }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "quarters": [
+      {
+        "quarter": "Q1",
+        "totalRevenue": 680000,
+        "operatingCost": 480000,
+        "profit": 200000,
+        "profitMargin": 29.4,
+        "products": [
+          { "name": "App A", "revenue": 260000 },
+          { "name": "Service B", "revenue": 230000 },
+          { "name": "Platform C", "revenue": 190000 }
+        ]
+      },
+      {
+        "quarter": "Q2",
+        "totalRevenue": 740000,
+        "operatingCost": 510000,
+        "profit": 230000,
+        "profitMargin": 31.1,
+        "products": [
+          { "name": "App A", "revenue": 280000 },
+          { "name": "Service B", "revenue": 240000 },
+          { "name": "Platform C", "revenue": 220000 }
+        ]
+      },
+      {
+        "quarter": "Q3",
+        "totalRevenue": 800000,
+        "operatingCost": 540000,
+        "profit": 260000,
+        "profitMargin": 32.5,
+        "products": [
+          { "name": "App A", "revenue": 300000 },
+          { "name": "Service B", "revenue": 260000 },
+          { "name": "Platform C", "revenue": 240000 }
+        ]
+      },
+      {
+        "quarter": "Q4",
+        "totalRevenue": 880000,
+        "operatingCost": 580000,
+        "profit": 300000,
+        "profitMargin": 34.1,
+        "products": [
+          { "name": "App A", "revenue": 330000 },
+          { "name": "Service B", "revenue": 280000 },
+          { "name": "Platform C", "revenue": 270000 }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "quarters": [
+      {
+        "quarter": "Q1",
+        "totalRevenue": 950000,
+        "operatingCost": 600000,
+        "profit": 350000,
+        "profitMargin": 36.8,
+        "products": [
+          { "name": "App A", "revenue": 350000 },
+          { "name": "Service B", "revenue": 300000 },
+          { "name": "Platform C", "revenue": 300000 }
+        ]
+      },
+      {
+        "quarter": "Q2",
+        "totalRevenue": 1020000,
+        "operatingCost": 650000,
+        "profit": 370000,
+        "profitMargin": 36.3,
+        "products": [
+          { "name": "App A", "revenue": 370000 },
+          { "name": "Service B", "revenue": 330000 },
+          { "name": "Platform C", "revenue": 320000 }
+        ]
+      },
+      {
+        "quarter": "Q3",
+        "totalRevenue": 1100000,
+        "operatingCost": 700000,
+        "profit": 400000,
+        "profitMargin": 36.4,
+        "products": [
+          { "name": "App A", "revenue": 400000 },
+          { "name": "Service B", "revenue": 360000 },
+          { "name": "Platform C", "revenue": 340000 }
+        ]
+      },
+      {
+        "quarter": "Q4",
+        "totalRevenue": 1200000,
+        "operatingCost": 750000,
+        "profit": 450000,
+        "profitMargin": 37.5,
+        "products": [
+          { "name": "App A", "revenue": 450000 },
+          { "name": "Service B", "revenue": 400000 },
+          { "name": "Platform C", "revenue": 350000 }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "quarters": [
+      {
+        "quarter": "Q1",
+        "totalRevenue": 1300000,
+        "operatingCost": 800000,
+        "profit": 500000,
+        "profitMargin": 38.5,
+        "products": [
+          { "name": "App A", "revenue": 500000 },
+          { "name": "Service B", "revenue": 420000 },
+          { "name": "Platform C", "revenue": 380000 }
+        ]
+      },
+      {
+        "quarter": "Q2",
+        "totalRevenue": 1380000,
+        "operatingCost": 850000,
+        "profit": 530000,
+        "profitMargin": 38.4,
+        "products": [
+          { "name": "App A", "revenue": 530000 },
+          { "name": "Service B", "revenue": 450000 },
+          { "name": "Platform C", "revenue": 400000 }
+        ]
+      },
+      {
+        "quarter": "Q3",
+        "totalRevenue": 1460000,
+        "operatingCost": 900000,
+        "profit": 560000,
+        "profitMargin": 38.4,
+        "products": [
+          { "name": "App A", "revenue": 560000 },
+          { "name": "Service B", "revenue": 470000 },
+          { "name": "Platform C", "revenue": 430000 }
+        ]
+      },
+      {
+        "quarter": "Q4",
+        "totalRevenue": 1550000,
+        "operatingCost": 950000,
+        "profit": 600000,
+        "profitMargin": 38.7,
+        "products": [
+          { "name": "App A", "revenue": 200000 },
+          { "name": "Service B", "revenue": 500000 },
+          { "name": "Platform C", "revenue": 450000 }
+        ]
+      }
+    ]
+  },
+  {
+    "year": 2025,
+    "quarters": [
+      {
+        "quarter": "Q1",
+        "totalRevenue": 1400000,
+        "operatingCost": 600000,
+        "profit": 600000,
+        "profitMargin": 37,
+        "products": [
+          { "name": "App A", "revenue": 1000 },
+          { "name": "Service B", "revenue": 420000 },
+          { "name": "Platform C", "revenue": 380000 }
+        ]
+      },
+      {
+        "quarter": "Q2",
+        "totalRevenue": 1600000,
+        "operatingCost": 800000,
+        "profit": 570000,
+        "profitMargin": 38,
+        "products": [
+          { "name": "App A", "revenue": 1530000 },
+          { "name": "Service B", "revenue": 450000 },
+          { "name": "Platform C", "revenue": 400000 }
+        ]
+      }
+    ]
+  }
+]

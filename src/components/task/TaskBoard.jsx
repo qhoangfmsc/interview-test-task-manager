@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { Box, Typography } from "@mui/material";
-import { taskConfig } from "../config/task/taskConfig";
+import { taskConfig } from "../../config/task/taskConfig";
 import TaskCard from "./TaskCard";
 
 const TaskBoard = ({ taskList, statusTab = "All" }) => {

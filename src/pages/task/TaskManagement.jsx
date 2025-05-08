@@ -1,5 +1,5 @@
 import React from "react";
-import TasksDataGrid from "../../components/TasksDataGrid";
+import TasksDataGrid from "../../components/task/TasksDataGrid";
 
 function TaskManagement() {
   return <TasksDataGrid />;

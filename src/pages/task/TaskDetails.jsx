@@ -2,8 +2,8 @@ import React from "react";
 import { Typography, Box, IconButton } from "@mui/material";
 import { useNavigate, useParams } from "react-router";
 import { useTaskList } from "../../contexts/TaskListContext";
-import TaskDetailsView from "../../components/TaskDetailsView";
-import TaskDetailsEdit from "../../components/TaskDetailEdit";
+import TaskDetailsView from "../../components/task/TaskDetailsView";
+import TaskDetailsEdit from "../../components/task/TaskDetailEdit";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import ConfirmDeleteModal from "../../components/ConfirmDeleteModal";
 

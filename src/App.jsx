@@ -10,8 +10,8 @@ import { ColorModeProvider } from "./contexts/ThemeContext";
 import { SnackbarProvider } from "notistack";
 import { UserProvider } from "./contexts/UserContext";
 import { TaskListProvider } from "./contexts/TaskListContext";
-import TaskDetails from "./pages/task/TaskDetails";
 import { AccountListProvider } from "./contexts/AccountListContext";
+import TaskDetails from "./pages/task/TaskDetails";
 
 const AppContent = () => (
   <Routes>

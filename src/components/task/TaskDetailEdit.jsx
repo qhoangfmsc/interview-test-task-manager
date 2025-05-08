@@ -15,9 +15,9 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import Autocomplete from "@mui/material/Autocomplete";
 import { useForm, Controller } from "react-hook-form";
-import { taskConfig } from "../config/task/taskConfig";
+import { taskConfig } from "../../config/task/taskConfig";
 import dayjs from "dayjs";
-import { useAccountList } from "../contexts/AccountListContext";
+import { useAccountList } from "../../contexts/AccountListContext";
 
 const TaskDetailsEdit = ({ initialTask, handleEdit }) => {
   const { accountList } = useAccountList();
