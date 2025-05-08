@@ -8,7 +8,7 @@ import ListItemText from "@mui/material/ListItemText";
 import DialogTitle from "@mui/material/DialogTitle";
 import Dialog from "@mui/material/Dialog";
 import { blue } from "@mui/material/colors";
-import { alpha, Typography } from "@mui/material";
+import { alpha, Divider, Typography } from "@mui/material";
 import { enqueueSnackbar } from "notistack";
 import { accountList } from "../config/account/accountList";
 
@@ -25,6 +25,7 @@ function AccountSwitchModal({ onClose, selectedValue, open }) {
   return (
     <Dialog onClose={handleClose} open={open} fullWidth maxWidth="sm">
       <DialogTitle>Choosing account</DialogTitle>
+      <Divider />
       <List
         sx={{
           pt: 0,
