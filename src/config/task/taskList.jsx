@@ -7,14 +7,14 @@ export const taskList = [
     priority: "Low",
     project: "Company",
     progress: 40,
-    assignees: ["uid_1"],
+    assignees: [1],
     comments: [
-      { username: "User 1", uid: "uid_1", message: "This is a comment by user_1." },
-      { username: "User 2", uid: "uid_2", message: "This is a comment by user_2." },
-      { username: "User 3", uid: "uid_3", message: "This is a comment by user_3." }
+      { username: "User 1", id: 1, message: "This is a comment by user_1." },
+      { username: "User 2", id: 2, message: "This is a comment by user_2." },
+      { username: "User 3", id: 3, message: "This is a comment by user_3." },
     ],
     status: "inprogress",
-    dueDate: "2025-05-06"
+    dueDate: "2025-05-06",
   },
   {
     id: 1,
@@ -24,12 +24,12 @@ export const taskList = [
     priority: "High",
     project: "Outsource",
     progress: 0,
-    assignees: ["uid_2"],
+    assignees: [2],
     comments: [
-      { username: "User 1", uid: "uid_1", message: "This is a comment by user_1." }
+      { username: "User 1", id: 1, message: "This is a comment by user_1." },
     ],
     status: "ongoing",
-    dueDate: "2025-05-12"
+    dueDate: "2025-05-12",
   },
   {
     id: 2,
@@ -39,14 +39,14 @@ export const taskList = [
     priority: "Medium",
     project: "Outsource",
     progress: 100,
-    assignees: ["uid_1", "uid_2"],
+    assignees: [1, 2],
     comments: [
-      { username: "User 1", uid: "uid_1", message: "This is a comment by user_1." },
-      { username: "User 2", uid: "uid_2", message: "This is a comment by user_2." },
-      { username: "User 3", uid: "uid_3", message: "This is a comment by user_3." }
+      { username: "User 1", id: 1, message: "This is a comment by user_1." },
+      { username: "User 2", id: 2, message: "This is a comment by user_2." },
+      { username: "User 3", id: 3, message: "This is a comment by user_3." },
     ],
     status: "completed",
-    dueDate: "2025-05-01"
+    dueDate: "2025-05-01",
   },
   {
     id: 3,
@@ -56,12 +56,12 @@ export const taskList = [
     priority: "Medium",
     project: "Company",
     progress: 100,
-    assignees: ["uid_1"],
+    assignees: [1],
     comments: [
-      { username: "User 1", uid: "uid_1", message: "This is a comment by user_1." }
+      { username: "User 1", id: 1, message: "This is a comment by user_1." },
     ],
     status: "completed",
-    dueDate: "2025-05-03"
+    dueDate: "2025-05-03",
   },
   {
     id: 4,
@@ -71,12 +71,12 @@ export const taskList = [
     priority: "High",
     project: "Company",
     progress: 100,
-    assignees: ["uid_2", "uid_3"],
+    assignees: [2, 3],
     comments: [
-      { username: "User 1", uid: "uid_1", message: "This is a comment by user_1." }
+      { username: "User 1", id: 1, message: "This is a comment by user_1." },
     ],
     status: "completed",
-    dueDate: "2025-05-09"
+    dueDate: "2025-05-09",
   },
   {
     id: 5,
@@ -86,13 +86,13 @@ export const taskList = [
     priority: "Medium",
     project: "Company",
     progress: 40,
-    assignees: ["uid_1", "uid_2"],
+    assignees: [1, 2],
     comments: [
-      { username: "User 2", uid: "uid_2", message: "This is a comment by user_2." },
-      { username: "User 3", uid: "uid_3", message: "This is a comment by user_3." }
+      { username: "User 2", id: 2, message: "This is a comment by user_2." },
+      { username: "User 3", id: 3, message: "This is a comment by user_3." },
     ],
     status: "inprogress",
-    dueDate: "2025-05-09"
+    dueDate: "2025-05-09",
   },
   {
     id: 6,
@@ -102,13 +102,13 @@ export const taskList = [
     priority: "Low",
     project: "Company",
     progress: 90,
-    assignees: ["uid_2"],
+    assignees: [2],
     comments: [
-      { username: "User 1", uid: "uid_1", message: "This is a comment by user_1." },
-      { username: "User 2", uid: "uid_2", message: "This is a comment by user_2." }
+      { username: "User 1", id: 1, message: "This is a comment by user_1." },
+      { username: "User 2", id: 2, message: "This is a comment by user_2." },
     ],
     status: "inprogress",
-    dueDate: "2025-05-07"
+    dueDate: "2025-05-07",
   },
   {
     id: 7,
@@ -118,13 +118,13 @@ export const taskList = [
     priority: "Medium",
     project: "Company",
     progress: 100,
-    assignees: ["uid_1", "uid_2"],
+    assignees: [1, 2],
     comments: [
-      { username: "User 1", uid: "uid_1", message: "This is a comment by user_1." },
-      { username: "User 2", uid: "uid_2", message: "This is a comment by user_2." }
+      { username: "User 1", id: 1, message: "This is a comment by user_1." },
+      { username: "User 2", id: 2, message: "This is a comment by user_2." },
     ],
     status: "completed",
-    dueDate: "2025-05-11"
+    dueDate: "2025-05-11",
   },
   {
     id: 8,
@@ -134,13 +134,13 @@ export const taskList = [
     priority: "Low",
     project: "Company",
     progress: 100,
-    assignees: ["uid_3"],
+    assignees: [3],
     comments: [
-      { username: "User 1", uid: "uid_1", message: "This is a comment by user_1." },
-      { username: "User 2", uid: "uid_2", message: "This is a comment by user_2." },
-      { username: "User 3", uid: "uid_3", message: "This is a comment by user_3." }
+      { username: "User 1", id: 1, message: "This is a comment by user_1." },
+      { username: "User 2", id: 2, message: "This is a comment by user_2." },
+      { username: "User 3", id: 3, message: "This is a comment by user_3." },
     ],
     status: "completed",
-    dueDate: "2025-05-14"
-  }
+    dueDate: "2025-05-14",
+  },
 ];

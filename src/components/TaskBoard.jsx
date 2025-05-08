@@ -12,7 +12,7 @@ const TaskBoard = ({ taskList, statusTab = "All" }) => {
   }, [statusTab]);
 
   return (
-    <Box sx={{ p: 4, minHeight: "100vh" }}>
+    <Box sx={{ p: 1, minHeight: "100vh" }}>
       <Box
         sx={{
           display: {
@@ -70,6 +70,8 @@ const TaskBoard = ({ taskList, statusTab = "All" }) => {
                       key={task.title}
                       sx={{
                         width: {
+                          xs: "100%",
+                          sm: "100%",
                           md: "100%",
                           lg: `calc(calc(33.333% * ${filteredStatusList.length}) - 16px)`,
                         },

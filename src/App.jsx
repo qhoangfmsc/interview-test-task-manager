@@ -1,15 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Layout from "./pages/Layout";
 import NoPage from "./pages/NoPage";
-import TaskManagement from "./pages/TaskManagement";
-import HumanResources from "./pages/HumanResources";
-import Dashboard from "./pages/Dashboard";
-import TeamTasks from "./pages/TeamTasks";
-import PersonalTasks from "./pages/PersonalTasks";
+import TaskManagement from "./pages/task/TaskManagement";
+import HumanResources from "./pages/admin/HumanResources";
+import Dashboard from "./pages/admin/Dashboard";
+import TeamTasks from "./pages/task/TeamTasks";
+import PersonalTasks from "./pages/task/PersonalTasks";
 import { ColorModeProvider } from "./contexts/ThemeContext";
 import { SnackbarProvider } from "notistack";
 import { UserProvider } from "./contexts/UserContext";
 import { TaskListProvider } from "./contexts/TaskListContext";
+import TaskDetails from "./pages/task/TaskDetails";
 
 const AppContent = () => (
   <Routes>
@@ -19,6 +20,7 @@ const AppContent = () => (
       <Route index element={<TaskManagement />} />
       <Route path="team-tasks" element={<TeamTasks />} />
       <Route path="personal-tasks" element={<PersonalTasks />} />
+      <Route path="task/:id" element={<TaskDetails />} />
       <Route path="*" element={<NoPage />} />
     </Route>
   </Routes>

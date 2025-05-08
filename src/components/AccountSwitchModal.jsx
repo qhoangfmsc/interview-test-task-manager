@@ -19,11 +19,11 @@ function AccountSwitchModal({ onClose, selectedValue, open }) {
 
   const handleListItemClick = (value) => {
     onClose(value);
-    enqueueSnackbar(`${value.username} switched`, { variant: "info" });
+    enqueueSnackbar(`${value.username} switched`, { variant: "success" });
   };
 
   return (
-    <Dialog onClose={handleClose} open={open}>
+    <Dialog onClose={handleClose} open={open} fullWidth maxWidth="sm">
       <DialogTitle>Choosing account</DialogTitle>
       <List
         sx={{
@@ -36,7 +36,7 @@ function AccountSwitchModal({ onClose, selectedValue, open }) {
         }}
       >
         {accountList.map((account) => (
-          <ListItem disablePadding key={account.uid}>
+          <ListItem disablePadding key={account.id}>
             <ListItemButton onClick={() => handleListItemClick(account)}>
               <ListItemAvatar>
                 <Avatar

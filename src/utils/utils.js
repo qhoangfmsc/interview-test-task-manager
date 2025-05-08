@@ -7,8 +7,8 @@ export const filterTasksByStatus = (tasks) => {
   }, {});
 };
 
-export const filterTasksByUid = (tasks, uid) => {
-  return tasks.filter((task) => task.assignees.includes(uid));
+export const filterTasksByUid = (tasks, id) => {
+  return tasks.filter((task) => task.assignees.includes(id));
 };
 
 export const formatDateMMMMDDYYYY = (inputDate) => {
@@ -30,4 +30,8 @@ export const getRemainingDays = (targetDateStr) => {
   if (diffDays < 0) return "Expired";
   if (diffDays === 0) return "Today";
   return `${diffDays} day(s) left`;
+};
+
+export const getConfigListWithoutZeroItem = (list) => {
+  return list.filter((item) => item.id !== 0);
 };

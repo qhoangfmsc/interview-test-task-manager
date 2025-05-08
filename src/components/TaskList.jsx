@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import { taskConfig } from "../config/task/taskConfig";
 import TaskBoard from "./TaskBoard";
 import { filterTasksByStatus } from "../utils/utils";
+import AutoCompleteTaskSearch from "./AutoCompleteTaskSearch";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -16,7 +17,7 @@ function CustomTabPanel(props) {
       aria-labelledby={`simple-tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <Box>{children}</Box>}
     </div>
   );
 }
@@ -28,11 +29,24 @@ function tabProps(index) {
   };
 }
 
-function TaskTab({ taskList }) {
+function TaskList({ taskList }) {
   const [value, setValue] = React.useState(0);
+  const [searchValue, setSearchValue] = React.useState("");
+
+  const filteredData = React.useMemo(() => {
+    if (!searchValue) return taskList;
+    return taskList.filter((task) =>
+      task.title.toLowerCase().includes(searchValue.toLowerCase())
+    );
+  }, [taskList, searchValue]);
+
   const tasksByStatus = React.useMemo(() => {
-    return filterTasksByStatus(taskList);
-  }, [taskList]);
+    return filterTasksByStatus(filteredData);
+  }, [filteredData]);
+
+  const handleSearch = (value) => {
+    setSearchValue((prev) => (prev === value ? prev : value));
+  };
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -40,28 +54,50 @@ function TaskTab({ taskList }) {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-        <Tabs value={value} onChange={handleChange} aria-label="tabs">
+      <Box
+        sx={{
+          display: "flex",
+          direction: {
+            lg: "column",
+            md: "row",
+          },
+          justifyContent: "space-between",
+          borderBottom: 1,
+          borderColor: "divider",
+        }}
+      >
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="tabs"
+          sx={{
+            xOverflow: "auto",
+          }}
+        >
           {taskConfig.status.map((status) => {
             const count = tasksByStatus[status.value]?.length || 0;
             return (
               <Tab
-                key={status.sid}
+                key={status.id}
                 label={
                   <div className="capitalize">
                     {status.status}{" "}
                     {status.value !== "all" && <span>({count})</span>}
                   </div>
                 }
-                {...tabProps(status.sid)}
+                {...tabProps(status.id)}
               />
             );
           })}
         </Tabs>
+        <AutoCompleteTaskSearch
+          taskList={taskList}
+          handleSearch={handleSearch}
+        />
       </Box>
       {tasksByStatus &&
         taskConfig.status.map((status) => (
-          <CustomTabPanel key={status.sid} value={value} index={status.sid}>
+          <CustomTabPanel key={status.id} value={value} index={status.id}>
             <TaskBoard taskList={tasksByStatus} statusTab={status.status} />
           </CustomTabPanel>
         ))}
@@ -69,4 +105,4 @@ function TaskTab({ taskList }) {
   );
 }
 
-export default TaskTab;
+export default TaskList;

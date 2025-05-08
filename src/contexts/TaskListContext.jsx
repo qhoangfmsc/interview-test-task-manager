@@ -1,28 +1,44 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
-import { taskList } from "../config/task/taskList";
+import { taskList as initialTaskList } from "../config/task/taskList";
+import { enqueueSnackbar } from "notistack";
 
 const TaskListContext = createContext(undefined);
 
 export const TaskListProvider = ({ children }) => {
   const [taskListContext, setTaskListContext] = useState([]);
 
+  const handleAddTask = (newTask) => {
+    try {
+      setTaskListContext((prev) => [...prev, newTask]);
+      localStorage.setItem(
+        "taskList",
+        JSON.stringify([...taskListContext, newTask])
+      );
+
+      enqueueSnackbar(`Task created successfully`, {
+        variant: "success",
+      });
+    } catch (error) {
+      console.log(error);
+      enqueueSnackbar(`Task creation failed`, {
+        variant: "error",
+      });
+    }
+  };
+
   useEffect(() => {
     const storedTasks = localStorage.getItem("taskList");
-    if (storedTasks) {
+    if (storedTasks && storedTasks !== "[]") {
       setTaskListContext(JSON.parse(storedTasks));
     } else {
-      setTaskListContext(taskList);
+      setTaskListContext(initialTaskList);
     }
   }, []);
 
-  useEffect(() => {
-    if (taskList.length > 0) {
-      localStorage.setItem("taskList", JSON.stringify(taskList));
-    }
-  }, [taskListContext]);
-
   return (
-    <TaskListContext.Provider value={{ taskList, taskListContext }}>
+    <TaskListContext.Provider
+      value={{ taskList: taskListContext, handleAddTask }}
+    >
       {children}
     </TaskListContext.Provider>
   );

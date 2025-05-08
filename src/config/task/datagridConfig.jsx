@@ -19,12 +19,25 @@ export const datagridConfig = {
     },
     {
       field: "dueDate",
-      headerName: "Time",
+      headerName: "Due Date",
       editable: false,
       width: 150,
       renderCell: (params) => {
         return (
           <div className="w-full">{formatDateMMMMDDYYYY(params.value)}</div>
+        );
+      },
+    },
+    {
+      field: "title",
+      headerName: "Title",
+      editable: false,
+      width: 250,
+      renderCell: (params) => {
+        return (
+          <Tooltip title={params.value} placement="top-start">
+            {params.value}
+          </Tooltip>
         );
       },
     },
@@ -36,7 +49,7 @@ export const datagridConfig = {
       sortComparator: (v1, v2) => {
         const getPid = (val) => {
           const findValue = taskConfig.priority.find((p) => p.priority === val);
-          return findValue?.pid ?? 0;
+          return findValue?.id ?? 0;
         };
         return getPid(v1) - getPid(v2);
       },
@@ -53,21 +66,6 @@ export const datagridConfig = {
                   ?.color || "inherit",
             }}
           />
-        );
-      },
-    },
-    {
-      field: "tags",
-      headerName: "Tags",
-      editable: false,
-      width: 250,
-      renderCell: (params) => {
-        return (
-          <div className="w-full h-full flex flex-row items-center gap-1">
-            {params.value.map((tag) => (
-              <Chip key={tag} label={tag} size="small" color="primary" />
-            ))}
-          </div>
         );
       },
     },
@@ -126,11 +124,15 @@ export const datagridConfig = {
         return (
           <div className="h-full flex flex-row gap-1 items-center">
             <AvatarGroup max={params.value.length}>
-              {params.value.map((uid) => {
-                const user = accountList.find((account) => account.uid === uid);
+              {params.value.map((id) => {
+                const user = accountList.find((account) => account.id === id);
                 return (
                   <Avatar alt={user?.username} sx={{ width: 24, height: 24 }}>
-                    <Tooltip title={user?.username} key={uid} placement="top">
+                    <Tooltip
+                      title={user?.username}
+                      key={id}
+                      placement="top"
+                    >
                       <img
                         src={user?.avatar}
                         alt={user?.username}

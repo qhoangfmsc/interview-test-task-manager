@@ -6,28 +6,13 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import { config } from "../config/system/config";
 import { useLocation } from "react-router";
-import { useColorMode } from "../contexts/ThemeContext";
-import { Box, Button } from "@mui/material";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+import { Box } from "@mui/material";
 import AccountDialog from "./AccountDialog";
+import ThemeButton from "./ThemeButton";
 
 const MyAppBar = ({ handleDrawerToggle }) => {
   const location = useLocation();
   const currentPath = location.pathname;
-
-  const ThemeToggleButton = () => {
-    const { toggleColorMode, mode } = useColorMode();
-    const handleThemeChange = () => {
-      toggleColorMode();
-    };
-
-    return (
-      <Button color="inherit" onClick={(e) => handleThemeChange(e)}>
-        {mode === "dark" ? <LightModeIcon /> : <DarkModeIcon />}
-      </Button>
-    );
-  };
 
   return (
     <AppBar
@@ -55,12 +40,20 @@ const MyAppBar = ({ handleDrawerToggle }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap component="div">
+          <Typography
+            component="div"
+            sx={{
+              fontSize: {
+                md: "0.85rem",
+                lg: "1rem",
+              },
+            }}
+          >
             {config.routes[currentPath]}
           </Typography>
         </Box>
         <Box sx={{ display: "flex", gap: 1 }}>
-          <ThemeToggleButton />
+          <ThemeButton />
           <AccountDialog />
         </Box>
       </Toolbar>

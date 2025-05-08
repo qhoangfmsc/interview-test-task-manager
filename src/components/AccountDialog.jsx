@@ -7,7 +7,7 @@ import { Typography } from "@mui/material";
 import { useUser } from "../contexts/UserContext";
 import AccountSwitchModal from "./AccountSwitchModal";
 
-export default function AccountDialog() {
+function AccountDialog() {
   const { user, handleChangeUser } = useUser();
   const [open, setOpen] = React.useState(false);
   const buttonRef = React.useRef();
@@ -27,7 +27,7 @@ export default function AccountDialog() {
       <Button
         ref={buttonRef}
         color="inherit"
-        variant="outlined"
+        variant="text"
         onClick={handleClickOpen}
         endIcon={<KeyboardArrowDownIcon />}
         sx={{
@@ -54,3 +54,5 @@ export default function AccountDialog() {
     </div>
   );
 }
+
+export default React.memo(AccountDialog);
