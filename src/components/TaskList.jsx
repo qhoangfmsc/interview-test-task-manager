@@ -1,5 +1,5 @@
 import * as React from "react";
-import Tabs from "@mui/material/Tabs";
+import Tabs, { tabsClasses } from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { taskConfig } from "../config/task/taskConfig";
@@ -54,24 +54,17 @@ function TaskList({ taskList }) {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Box
-        sx={{
-          display: "flex",
-          direction: {
-            lg: "column",
-            md: "row",
-          },
-          justifyContent: "space-between",
-          borderBottom: 1,
-          borderColor: "divider",
-        }}
-      >
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between">
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="tabs"
+          variant="scrollable"
+          scrollButtons
           sx={{
-            xOverflow: "auto",
+            [`& .${tabsClasses.scrollButtons}`]: {
+              "&.Mui-disabled": { opacity: 0.3 },
+            },
           }}
         >
           {taskConfig.status.map((status) => {
@@ -94,7 +87,7 @@ function TaskList({ taskList }) {
           taskList={taskList}
           handleSearch={handleSearch}
         />
-      </Box>
+      </div>
       {tasksByStatus &&
         taskConfig.status.map((status) => (
           <CustomTabPanel key={status.id} value={value} index={status.id}>

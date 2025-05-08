@@ -47,7 +47,10 @@ function Layout(props) {
         sx={{
           flexGrow: 1,
           p: 3,
-          width: { sm: `calc(100% - ${config.drawerWidth}px)` },
+          width: {
+            sm: `calc(100% - ${config.drawerWidth}px)`,
+            xs: "100%",
+          },
         }}
       >
         <Toolbar />

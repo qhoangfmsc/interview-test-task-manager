@@ -43,7 +43,8 @@ const AsideDrawer = ({
                   {page.type === "title" && (
                     <Typography
                       sx={{
-                        color: (theme) => alpha(theme.palette.text.primary, 0.55),
+                        color: (theme) =>
+                          alpha(theme.palette.text.primary, 0.55),
                         px: 2,
                         textTransform: "uppercase",
                         fontWeight: "bold",
@@ -92,6 +93,7 @@ const AsideDrawer = ({
 
   return (
     <>
+      {/* MOBILE */}
       <Drawer
         container={container}
         variant="temporary"
@@ -102,13 +104,14 @@ const AsideDrawer = ({
           display: { xs: "block", sm: "none" },
           "& .MuiDrawer-paper": {
             boxSizing: "border-box",
-            width: config.configdrawerWidth,
+            width: "80%",
           },
         }}
         slotProps={{ root: { keepMounted: true } }}
       >
         {drawerContent}
       </Drawer>
+      {/* DESKTOP */}
       <Drawer
         variant="permanent"
         sx={{

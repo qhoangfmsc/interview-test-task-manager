@@ -102,7 +102,7 @@ export const datagridConfig = {
               sx={{ height: 20, borderRadius: 2 }}
             />
             <span
-              className="absolute"
+              className="absolute text-white"
               style={{
                 left: "50%",
                 top: "50%",

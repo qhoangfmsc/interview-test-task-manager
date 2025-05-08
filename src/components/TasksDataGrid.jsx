@@ -54,73 +54,50 @@ export default function TasksDataGrid() {
     },
   ];
 
-  const renderComponent = () => {
-    try {
-      return (
-        <DataGrid
-          rows={rowDatas}
-          columns={columns}
-          getRowClassName={(params) => {
-            switch (params.row.status) {
-              case "completed":
-                return mode === "light" ? "bg-green-100" : "bg-green-200/10";
-              default:
-                return "";
-            }
-          }}
-          initialState={{
-            sorting: {
-              sortModel: [{ field: "id", sort: "desc" }],
-            },
-            pagination: {
-              paginationModel: {
-                pageSize: 5,
-              },
-            },
-          }}
-          pageSizeOptions={[5, 10, 15]}
-          disableRowSelectionOnClick
-          sx={{
-            boxShadow: 2,
-            border: 1,
-            borderColor: mode === "light" ? indigo[100] : grey[900],
-            "& .MuiDataGrid-row:hover": {
-              bgcolor: mode === "light" ? indigo[100] : grey[900],
-            },
-          }}
-        />
-      );
-    } catch (error) {
-      console.log(error);
-      return (
-        <DataGrid
-          slots={{
-            noRowsOverlay: (
-              <Box sx={{ color: "error.light" }}>Error Task in List</Box>
-            ),
-          }}
-          columns={columns}
-          rows={[]}
-        />
-      );
-    }
-  };
-
   return (
     <Box sx={{ width: "100%" }}>
-      <Box display={"flex"} justifyContent={"space-between"} sx={{ px: 4 }}>
-        <div className="text-2xl text-center lg:text-left font-bold p-8 text-shadow-lg">
-          Task List
-        </div>
-        <div className="flex items-center gap-2">
+      <div className="block lg:flex justify-between items-center">
+        <div className="flex flex-row gap-1 justify-between w-full text-2xl text-left font-bold text-shadow-lg mr-2">
+          <div>Task List</div>
           <TaskAsideDrawer />
-          <AutoCompleteTaskSearch
-            taskList={taskList}
-            handleSearch={handleSearch}
-          />
         </div>
-      </Box>
-      {renderComponent()}
+        <AutoCompleteTaskSearch
+          taskList={taskList}
+          handleSearch={handleSearch}
+        />
+      </div>
+      <DataGrid
+        rows={rowDatas}
+        columns={columns}
+        getRowClassName={(params) => {
+          switch (params.row.status) {
+            case "completed":
+              return mode === "light" ? "bg-green-100" : "bg-green-200/10";
+            default:
+              return "";
+          }
+        }}
+        initialState={{
+          sorting: {
+            sortModel: [{ field: "id", sort: "desc" }],
+          },
+          pagination: {
+            paginationModel: {
+              pageSize: 5,
+            },
+          },
+        }}
+        pageSizeOptions={[5, 10, 15]}
+        disableRowSelectionOnClick
+        sx={{
+          boxShadow: 2,
+          border: 1,
+          borderColor: mode === "light" ? indigo[100] : grey[900],
+          "& .MuiDataGrid-row:hover": {
+            bgcolor: mode === "light" ? indigo[100] : grey[900],
+          },
+        }}
+      />
     </Box>
   );
 }

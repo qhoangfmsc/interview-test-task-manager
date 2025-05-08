@@ -44,7 +44,13 @@ function AutoCompleteTaskSearch({ taskList, handleSearch }) {
     <Tooltip title={value ? value : "Searching task"} placement="top-start">
       <Autocomplete
         size="small"
-        sx={{ width: 400 }}
+        sx={{
+          my: 2,
+          width: {
+            lg: 400,
+            xs: "100%",
+          },
+        }}
         open={open}
         onOpen={handleOpen}
         onClose={handleClose}

@@ -14,7 +14,12 @@ function TaskAsideDrawer() {
   };
 
   const DrawerList = (
-    <Box sx={{ width: 500, p: 2 }} role="presentation">
+    <Box
+      sx={{
+        p: 2,
+      }}
+      role="presentation"
+    >
       <div className="flex flex-row gap-1">
         <Button color="inherit" onClick={toggleDrawer(false)}>
           <CloseIcon />
@@ -31,10 +36,27 @@ function TaskAsideDrawer() {
 
   return (
     <div>
-      <Button variant="contained" color="primary" onClick={toggleDrawer(true)}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={toggleDrawer(true)}
+        sx={{ width: "100%" }}
+      >
         Add Task
       </Button>
-      <Drawer open={open} anchor="right" onClose={toggleDrawer(false)}>
+      <Drawer
+        open={open}
+        anchor="right"
+        onClose={toggleDrawer(false)}
+        sx={(theme) => ({
+          "& .MuiDrawer-paper": {
+            width: "100%",
+            [theme.breakpoints.up("sm")]: {
+              width: 500,
+            },
+          },
+        })}
+      >
         {DrawerList}
       </Drawer>
     </div>

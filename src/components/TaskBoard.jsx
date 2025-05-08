@@ -40,9 +40,7 @@ const TaskBoard = ({ taskList, statusTab = "All" }) => {
                 color={statusObject.color}
                 mb={2}
               >
-                <span className="text-shadow-lg">
-                  {statusObject.status} ({tasks.length})
-                </span>
+                {statusObject.status} ({tasks.length})
               </Typography>
 
               <Box
