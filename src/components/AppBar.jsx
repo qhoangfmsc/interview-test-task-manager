@@ -5,14 +5,18 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import { config } from "../config/system/config";
-import { useLocation } from "react-router";
-import { Box } from "@mui/material";
+import { useLocation, useNavigate } from "react-router";
+import { Box, Button } from "@mui/material";
 import AccountDialog from "./AccountDialog";
 import ThemeButton from "./ThemeButton";
+import { getPathSegment } from "../utils/utils";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const MyAppBar = ({ handleDrawerToggle }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const currentPath = location.pathname;
+  const pathSegment = getPathSegment(currentPath);
 
   return (
     <AppBar
@@ -46,10 +50,24 @@ const MyAppBar = ({ handleDrawerToggle }) => {
               fontSize: {
                 md: "0.85rem",
                 lg: "1rem",
+                textTransform: "capitalize",
               },
             }}
           >
-            {config.routes[currentPath]}
+            {pathSegment ? (
+              <div className="flex flex-row items-center gap-1">
+                <IconButton
+                  variant="text"
+                  color="inherit"
+                  onClick={() => navigate(-1)}
+                >
+                  <ArrowBackIcon fontSize="small" />
+                </IconButton>
+                {pathSegment.resource} #{pathSegment.id}
+              </div>
+            ) : (
+              config.routes[currentPath]
+            )}
           </Typography>
         </Box>
         <Box sx={{ display: "flex", gap: 1 }}>

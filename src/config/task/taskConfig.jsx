@@ -36,9 +36,9 @@ export const taskConfig = {
     { id: 1, tag: "BackEnd", value: "backend", color: "primary.main" },
     { id: 2, tag: "FrontEnd", value: "frontend", color: "primary.main" },
     { id: 3, tag: "DevOps", value: "devops", color: "primary.main" },
-    { id: 4, tag: "Deploy", value: "devops", color: "primary.main" },
-    { id: 5, tag: "Research", value: "devops", color: "primary.main" },
-    { id: 6, tag: "Task", value: "devops", color: "primary.main" },
+    { id: 4, tag: "Deploy", value: "deploy", color: "primary.main" },
+    { id: 5, tag: "Research", value: "research", color: "primary.main" },
+    { id: 6, tag: "Task", value: "task", color: "primary.main" },
   ],
   project: [
     { id: 0, project: "All", value: "all", color: "inherit" },

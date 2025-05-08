@@ -19,6 +19,7 @@ import EventIcon from "@mui/icons-material/Event";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
 import { formatDateMMMMDDYYYY, getRemainingDays } from "../utils/utils";
 import { accountList } from "../config/account/accountList";
+import { Link } from "react-router";
 
 const TaskCard = ({ task }) => {
   const { mode } = useColorMode();
@@ -177,7 +178,7 @@ const TaskCard = ({ task }) => {
     }
   };
 
-  return renderComponent();
+  return <Link to={`/task/${task.id}`}>{renderComponent()}</Link>;
 };
 
 export default memo(TaskCard);

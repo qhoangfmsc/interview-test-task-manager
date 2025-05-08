@@ -8,11 +8,13 @@ import { useColorMode } from "../contexts/ThemeContext";
 import { datagridConfig } from "../config/task/datagridConfig";
 import TaskAsideDrawer from "./TaskAsideDrawer";
 import AutoCompleteTaskSearch from "./AutoCompleteTaskSearch";
+import { useNavigate } from "react-router";
 
 export default function TasksDataGrid() {
   const { taskList } = useTaskList();
   const { mode } = useColorMode();
   const [searchValue, setSearchValue] = React.useState("");
+  const navigate = useNavigate();
 
   const handleSearch = (value) => {
     setSearchValue((prev) => (prev === value ? prev : value));
@@ -41,7 +43,7 @@ export default function TasksDataGrid() {
               variant="text"
               color="success"
               onClick={() => {
-                console.log(params.row);
+                navigate(`/task/${params.row.id}`);
               }}
             >
               View Details
@@ -112,7 +114,10 @@ export default function TasksDataGrid() {
         </div>
         <div className="flex items-center gap-2">
           <TaskAsideDrawer />
-          <AutoCompleteTaskSearch taskList={taskList} handleSearch={handleSearch} />
+          <AutoCompleteTaskSearch
+            taskList={taskList}
+            handleSearch={handleSearch}
+          />
         </div>
       </Box>
       {renderComponent()}

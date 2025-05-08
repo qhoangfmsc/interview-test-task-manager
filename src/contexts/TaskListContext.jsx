@@ -26,6 +26,45 @@ export const TaskListProvider = ({ children }) => {
     }
   };
 
+  const handleUpdateTask = (newTask) => {
+    try {
+      const updatedTaskList = taskListContext.map((task) =>
+        task.id === newTask.id ? newTask : task
+      );
+
+      setTaskListContext(updatedTaskList);
+      localStorage.setItem("taskList", JSON.stringify(updatedTaskList));
+
+      enqueueSnackbar(`Task updated successfully`, {
+        variant: "success",
+      });
+    } catch (error) {
+      console.error(error);
+      enqueueSnackbar(`Task update failed`, {
+        variant: "error",
+      });
+    }
+  };
+
+  const handleDeleteTask = (taskId) => {
+    try {
+      const updatedTaskList = taskListContext.filter(
+        (task) => task.id !== taskId
+      );
+      setTaskListContext(updatedTaskList);
+      localStorage.setItem("taskList", JSON.stringify(updatedTaskList));
+
+      enqueueSnackbar(`Task deleted successfully`, {
+        variant: "success",
+      });
+    } catch (error) {
+      console.error(error);
+      enqueueSnackbar(`Task deletion failed`, {
+        variant: "error",
+      });
+    }
+  };
+
   useEffect(() => {
     const storedTasks = localStorage.getItem("taskList");
     if (storedTasks && storedTasks !== "[]") {
@@ -37,7 +76,12 @@ export const TaskListProvider = ({ children }) => {
 
   return (
     <TaskListContext.Provider
-      value={{ taskList: taskListContext, handleAddTask }}
+      value={{
+        taskList: taskListContext,
+        handleAddTask,
+        handleUpdateTask,
+        handleDeleteTask,
+      }}
     >
       {children}
     </TaskListContext.Provider>

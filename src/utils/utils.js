@@ -35,3 +35,12 @@ export const getRemainingDays = (targetDateStr) => {
 export const getConfigListWithoutZeroItem = (list) => {
   return list.filter((item) => item.id !== 0);
 };
+
+export const getPathSegment = (path) => {
+  const segments = path.split("/").filter(Boolean);
+  if (segments.length === 2) {
+    const [resource, id] = segments;
+    return { resource, id };
+  }
+  return null;
+};

@@ -10,7 +10,8 @@ import {
   Box,
   InputLabel,
   FormControl,
-  OutlinedInput,
+  Autocomplete,
+  Avatar,
 } from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers";
@@ -129,43 +130,25 @@ const TaskForm = ({ onSubmitSuccess }) => {
           <Controller
             name="tags"
             control={control}
-            rules={{
-              validate: (value) =>
-                value.length <= 3 || "Maximum 3 tags allowed",
-            }}
-            render={({ field }) => (
-              <FormControl fullWidth error={!!errors.tags}>
-                <InputLabel>Tags (optional, max 3)</InputLabel>
-                <Select
-                  {...field}
-                  multiple
-                  input={<OutlinedInput label="Tags (optional, max 3)" />}
-                  renderValue={(selected) => (
-                    <Box sx={{ display: "flex", gap: 0.5, flexWrap: "wrap" }}>
-                      {selected.map((value) => (
-                        <Chip key={value} label={value} />
-                      ))}
-                    </Box>
-                  )}
-                >
-                  {TAG_OPTIONS.map((tagItem) => (
-                    <MenuItem key={tagItem.id} value={tagItem.tag}>
-                      {tagItem.tag}
-                    </MenuItem>
-                  ))}
-                </Select>
-                {errors.tags && (
-                  <span
-                    style={{
-                      color: "red",
-                      fontSize: 12,
-                      margin: "3px 14px 0px 14px",
-                    }}
-                  >
-                    {errors.tags.message}
-                  </span>
+            render={({ field: { onChange, value } }) => (
+              <Autocomplete
+                multiple
+                options={taskConfig.tag
+                  .filter((t) => t.value !== "all")
+                  .map((t) => t.tag)}
+                value={value}
+                onChange={(e, newValue) => {
+                  if (newValue.length <= 3) onChange(newValue);
+                }}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label="Tags"
+                    fullWidth
+                    helperText={`${value.length}/3 selected`}
+                  />
                 )}
-              </FormControl>
+              />
             )}
           />
 
@@ -173,48 +156,38 @@ const TaskForm = ({ onSubmitSuccess }) => {
             name="assignees"
             control={control}
             rules={{
-              required: "Assignees is required",
               validate: (value) =>
-                value.length > 0 || "Need at least 1 assignee",
+                value.length > 0 || "At least one assignee is required",
             }}
             render={({ field }) => (
-              <FormControl fullWidth error={!!errors.assignees}>
-                <InputLabel>Assignees</InputLabel>
-                <Select
-                  {...field}
-                  multiple
-                  input={<OutlinedInput label="Assignees" />}
-                  renderValue={(selected) => (
-                    <Box sx={{ display: "flex", gap: 0.5, flexWrap: "wrap" }}>
-                      {selected.map((id) => {
-                        const assignee = ASSIGNEE_OPTIONS.find(
-                          (u) => u.id === id
-                        );
-                        return (
-                          <Chip key={id} label={assignee?.username || id} />
-                        );
-                      })}
-                    </Box>
-                  )}
-                >
-                  {ASSIGNEE_OPTIONS.map((user) => (
-                    <MenuItem key={user.id} value={user.id}>
-                      {user.username}
-                    </MenuItem>
-                  ))}
-                </Select>
-                {errors.assignees && (
-                  <Box
-                    sx={{
-                      color: "red",
-                      fontSize: 12,
-                      margin: "3px 14px 0px 14px",
-                    }}
-                  >
-                    {errors.assignees.message}
-                  </Box>
+              <Autocomplete
+                multiple
+                options={accountList.filter((acc) => acc.usertype === "user")}
+                onChange={(e, newValue) =>
+                  field.onChange(newValue.map((acc) => acc.id))
+                }
+                getOptionLabel={(option) => option.username}
+                renderTags={(value, getTagProps) =>
+                  value.map((option, index) => (
+                    <Chip
+                      avatar={<Avatar src={option.avatar} />}
+                      label={option.username}
+                      {...getTagProps({ index })}
+                      key={option.id}
+                    />
+                  ))
+                }
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label="Assignees"
+                    fullWidth
+                    required
+                    error={!!errors.assignees}
+                    helperText={errors.assignees?.message}
+                  />
                 )}
-              </FormControl>
+              />
             )}
           />
 

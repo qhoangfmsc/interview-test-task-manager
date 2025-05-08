@@ -128,11 +128,7 @@ export const datagridConfig = {
                 const user = accountList.find((account) => account.id === id);
                 return (
                   <Avatar alt={user?.username} sx={{ width: 24, height: 24 }}>
-                    <Tooltip
-                      title={user?.username}
-                      key={id}
-                      placement="top"
-                    >
+                    <Tooltip title={user?.username} key={id} placement="top">
                       <img
                         src={user?.avatar}
                         alt={user?.username}
