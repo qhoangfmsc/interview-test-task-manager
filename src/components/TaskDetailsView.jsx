@@ -24,8 +24,6 @@ const TaskDetailsView = ({ initialTask }) => {
     (p) => p.priority === initialTask.priority
   );
 
-  console.log(status);
-
   const CustomeTypography = ({ children }) => (
     <Typography
       sx={{ width: 100, fontWeight: "thin", color: grey[600], fontSize: 14 }}
@@ -108,38 +106,6 @@ const TaskDetailsView = ({ initialTask }) => {
           minRows={3}
           value={initialTask.description || ""}
         />
-      </Box>
-
-      <Divider sx={{ my: 4 }} />
-
-      <Box>
-        <Typography variant="h6">
-          Comments{" "}
-          <span className="text-xs text-gray-500">
-            ({initialTask.comments?.length || 0})
-          </span>
-        </Typography>
-        <List
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {initialTask.comments?.map((comment, index) => {
-            const account = accountList.find((a) => comment.userid === a.id);
-            return (
-              <ListItem key={index} alignItems="center">
-                <ListItemAvatar>
-                  <Avatar alt={account.username} src={account.avatar} />
-                </ListItemAvatar>
-                <ListItemText
-                  primary={comment.username}
-                  secondary={comment.message}
-                />
-              </ListItem>
-            );
-          }) || <Typography>No comments.</Typography>}
-        </List>
       </Box>
     </>
   );

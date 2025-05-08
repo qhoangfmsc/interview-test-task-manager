@@ -42,7 +42,6 @@ const TaskForm = ({ onSubmitSuccess }) => {
       project: "",
       progress: 0,
       assignees: [],
-      comments: [],
       dueDate: null,
       status: "ongoing",
     },

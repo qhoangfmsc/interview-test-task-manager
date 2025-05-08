@@ -64,7 +64,8 @@ export default function ConfirmDeleteModal({ handleDelete }) {
               Warning!
             </Typography>
             <Typography id="keep-mounted-modal-description" sx={{ mt: 2 }}>
-              Are you sure to delete this content?
+              Are you sure you want to delete this task? This action cannot be
+              undone.
             </Typography>
           </Box>
           <Button

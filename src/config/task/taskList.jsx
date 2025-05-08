@@ -8,23 +8,6 @@ export const taskList = [
     project: "Company",
     progress: 40,
     assignees: [1],
-    comments: [
-      {
-        username: "User 1",
-        userid: 1,
-        message: "This is a comment by user_1.",
-      },
-      {
-        username: "User 2",
-        userid: 2,
-        message: "This is a comment by user_2.",
-      },
-      {
-        username: "User 3",
-        userid: 3,
-        message: "This is a comment by user_3.",
-      },
-    ],
     status: "inprogress",
     dueDate: "2025-05-06",
   },
@@ -37,13 +20,6 @@ export const taskList = [
     project: "Outsource",
     progress: 0,
     assignees: [2],
-    comments: [
-      {
-        username: "User 1",
-        userid: 1,
-        message: "This is a comment by user_1.",
-      },
-    ],
     status: "ongoing",
     dueDate: "2025-05-12",
   },
@@ -56,23 +32,6 @@ export const taskList = [
     project: "Outsource",
     progress: 100,
     assignees: [1, 2],
-    comments: [
-      {
-        username: "User 1",
-        userid: 1,
-        message: "This is a comment by user_1.",
-      },
-      {
-        username: "User 2",
-        userid: 2,
-        message: "This is a comment by user_2.",
-      },
-      {
-        username: "User 3",
-        userid: 3,
-        message: "This is a comment by user_3.",
-      },
-    ],
     status: "completed",
     dueDate: "2025-05-01",
   },
@@ -85,13 +44,6 @@ export const taskList = [
     project: "Company",
     progress: 100,
     assignees: [1],
-    comments: [
-      {
-        username: "User 1",
-        userid: 1,
-        message: "This is a comment by user_1.",
-      },
-    ],
     status: "completed",
     dueDate: "2025-05-03",
   },
@@ -104,13 +56,6 @@ export const taskList = [
     project: "Company",
     progress: 100,
     assignees: [2, 3],
-    comments: [
-      {
-        username: "User 1",
-        userid: 1,
-        message: "This is a comment by user_1.",
-      },
-    ],
     status: "completed",
     dueDate: "2025-05-09",
   },
@@ -123,18 +68,6 @@ export const taskList = [
     project: "Company",
     progress: 40,
     assignees: [1, 2],
-    comments: [
-      {
-        username: "User 2",
-        userid: 2,
-        message: "This is a comment by user_2.",
-      },
-      {
-        username: "User 3",
-        userid: 3,
-        message: "This is a comment by user_3.",
-      },
-    ],
     status: "inprogress",
     dueDate: "2025-05-09",
   },
@@ -147,18 +80,6 @@ export const taskList = [
     project: "Company",
     progress: 90,
     assignees: [2],
-    comments: [
-      {
-        username: "User 1",
-        userid: 1,
-        message: "This is a comment by user_1.",
-      },
-      {
-        username: "User 2",
-        userid: 2,
-        message: "This is a comment by user_2.",
-      },
-    ],
     status: "inprogress",
     dueDate: "2025-05-07",
   },
@@ -171,18 +92,6 @@ export const taskList = [
     project: "Company",
     progress: 100,
     assignees: [1, 2],
-    comments: [
-      {
-        username: "User 1",
-        userid: 1,
-        message: "This is a comment by user_1.",
-      },
-      {
-        username: "User 2",
-        userid: 2,
-        message: "This is a comment by user_2.",
-      },
-    ],
     status: "completed",
     dueDate: "2025-05-11",
   },
@@ -195,23 +104,6 @@ export const taskList = [
     project: "Company",
     progress: 100,
     assignees: [3],
-    comments: [
-      {
-        username: "User 1",
-        userid: 1,
-        message: "This is a comment by user_1.",
-      },
-      {
-        username: "User 2",
-        userid: 2,
-        message: "This is a comment by user_2.",
-      },
-      {
-        username: "User 3",
-        userid: 3,
-        message: "This is a comment by user_3.",
-      },
-    ],
     status: "completed",
     dueDate: "2025-05-14",
   },

@@ -19,7 +19,7 @@ export const TaskListProvider = ({ children }) => {
         variant: "success",
       });
     } catch (error) {
-      console.log(error);
+      console.error(error);
       enqueueSnackbar(`Task creation failed`, {
         variant: "error",
       });
