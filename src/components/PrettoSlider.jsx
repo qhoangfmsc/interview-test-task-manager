@@ -39,11 +39,16 @@ const CustomPrettoSlider = styled(Slider)({
       transform: "rotate(45deg)",
     },
   },
+  "&.Mui-disabled": {
+    color: "#1976d2",
+    opacity: 1,
+  },
 });
 
-export default function PrettoSlider({ defaultValue = 0 }) {
+export default function PrettoSlider({ defaultValue = 0, disabled = false }) {
   return (
     <CustomPrettoSlider
+      disabled={disabled}
       step={10}
       valueLabelDisplay="auto"
       aria-label="PrettoSlider"

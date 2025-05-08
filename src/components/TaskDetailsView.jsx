@@ -64,7 +64,7 @@ const TaskDetailsView = ({ initialTask }) => {
       <Stack direction="row" spacing={2} alignItems="center" mt={2}>
         <CustomeTypography>Progress:</CustomeTypography>
         <Box sx={{ width: 200 }}>
-          <PrettoSlider defaultValue={initialTask.progress} />
+          <PrettoSlider defaultValue={initialTask.progress} disabled={true} />
         </Box>
       </Stack>
 
