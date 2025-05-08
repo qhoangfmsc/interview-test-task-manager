@@ -15,10 +15,11 @@ import {
 import { grey } from "@mui/material/colors";
 import { taskConfig } from "../config/task/taskConfig";
 import { formatDateMMMMDDYYYY } from "../utils/utils";
-import { accountList } from "../config/account/accountList";
 import PrettoSlider from "./PrettoSlider";
+import { useAccountList } from "../contexts/AccountListContext";
 
 const TaskDetailsView = ({ initialTask }) => {
+    const { accountList } = useAccountList();
   const status = taskConfig.status.find((s) => s.value === initialTask.status);
   const priotity = taskConfig.priority.find(
     (p) => p.priority === initialTask.priority

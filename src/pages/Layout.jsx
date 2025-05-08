@@ -5,11 +5,14 @@ import MyAppBar from "../components/AppBar";
 import { Outlet } from "react-router";
 import { Toolbar } from "@mui/material";
 import { config } from "../config/system/config";
+import { useTaskList } from "../contexts/TaskListContext";
+import Loading from "../components/Loading";
 
 function Layout(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
+  const { isTaskLoading } = useTaskList();
 
   const handleDrawerToggle = () => {
     if (!isClosing) setMobileOpen(!mobileOpen);
@@ -54,7 +57,7 @@ function Layout(props) {
         }}
       >
         <Toolbar />
-        <Outlet />
+        {isTaskLoading ? <Loading /> : <Outlet />}
       </Box>
     </Box>
   );

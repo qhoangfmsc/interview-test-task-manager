@@ -19,15 +19,14 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
 import { getConfigListWithoutZeroItem } from "../utils/utils";
 import { taskConfig } from "../config/task/taskConfig";
-import { accountList } from "../config/account/accountList";
 import { useTaskList } from "../contexts/TaskListContext";
+import { useAccountList } from "../contexts/AccountListContext";
 
-const TAG_OPTIONS = getConfigListWithoutZeroItem(taskConfig.tag);
 const PRIORITY_OPTIONS = getConfigListWithoutZeroItem(taskConfig.priority);
 const PROJECT_OPTIONS = getConfigListWithoutZeroItem(taskConfig.project);
-const ASSIGNEE_OPTIONS = getConfigListWithoutZeroItem(accountList);
 
 const TaskForm = ({ onSubmitSuccess }) => {
+  const { accountList } = useAccountList();
   const { taskList, handleAddTask } = useTaskList();
   const {
     control,

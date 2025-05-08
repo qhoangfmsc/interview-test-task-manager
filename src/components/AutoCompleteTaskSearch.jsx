@@ -3,8 +3,8 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Avatar, AvatarGroup, Box, Tooltip } from "@mui/material";
-import { accountList } from "../config/account/accountList";
 import { formatDateMMMMDDYYYY } from "../utils/utils";
+import { useAccountList } from "../contexts/AccountListContext";
 
 function sleep(duration) {
   return new Promise((resolve) => {
@@ -15,6 +15,7 @@ function sleep(duration) {
 }
 
 function AutoCompleteTaskSearch({ taskList, handleSearch }) {
+  const { accountList } = useAccountList();
   const [open, setOpen] = React.useState(false);
   const [options, setOptions] = React.useState([]);
   const [loading, setLoading] = React.useState(false);

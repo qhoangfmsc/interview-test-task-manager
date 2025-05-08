@@ -11,6 +11,7 @@ import { SnackbarProvider } from "notistack";
 import { UserProvider } from "./contexts/UserContext";
 import { TaskListProvider } from "./contexts/TaskListContext";
 import TaskDetails from "./pages/task/TaskDetails";
+import { AccountListProvider } from "./contexts/AccountListContext";
 
 const AppContent = () => (
   <Routes>
@@ -37,11 +38,13 @@ function App() {
             horizontal: "right",
           }}
         >
-          <UserProvider>
-            <TaskListProvider>
-              <AppContent />
-            </TaskListProvider>
-          </UserProvider>
+          <AccountListProvider>
+            <UserProvider>
+              <TaskListProvider>
+                <AppContent />
+              </TaskListProvider>
+            </UserProvider>
+          </AccountListProvider>
         </SnackbarProvider>
       </ColorModeProvider>
     </BrowserRouter>

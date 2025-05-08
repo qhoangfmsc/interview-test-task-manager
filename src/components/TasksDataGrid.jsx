@@ -9,8 +9,10 @@ import { datagridConfig } from "../config/task/datagridConfig";
 import TaskAsideDrawer from "./TaskAsideDrawer";
 import AutoCompleteTaskSearch from "./AutoCompleteTaskSearch";
 import { useNavigate } from "react-router";
+import { useAccountList } from "../contexts/AccountListContext";
 
 export default function TasksDataGrid() {
+  const { accountList } = useAccountList();
   const { taskList } = useTaskList();
   const { mode } = useColorMode();
   const [searchValue, setSearchValue] = React.useState("");
@@ -29,7 +31,7 @@ export default function TasksDataGrid() {
 
   let rowDatas = filteredData;
   const columns = [
-    ...datagridConfig.column,
+    ...datagridConfig(accountList).column,
     {
       field: "action",
       headerName: "",

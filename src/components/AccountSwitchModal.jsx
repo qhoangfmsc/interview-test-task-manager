@@ -10,9 +10,11 @@ import Dialog from "@mui/material/Dialog";
 import { blue } from "@mui/material/colors";
 import { alpha, Divider, Typography } from "@mui/material";
 import { enqueueSnackbar } from "notistack";
-import { accountList } from "../config/account/accountList";
+import { useAccountList } from "../contexts/AccountListContext";
 
 function AccountSwitchModal({ onClose, selectedValue, open }) {
+  const { accountList } = useAccountList();
+
   const handleClose = () => {
     onClose(selectedValue);
   };

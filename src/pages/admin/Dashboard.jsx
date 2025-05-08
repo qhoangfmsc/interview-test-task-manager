@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import RevenueDashboard from "../../components/RevenueDashboard";
 
 function Dashboard() {
-  return (
-    <div>Dashboard</div>
-  )
+  return <RevenueDashboard />;
 }
 
-export default Dashboard
+export default Dashboard;

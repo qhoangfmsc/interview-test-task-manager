@@ -17,10 +17,11 @@ import AdsClickIcon from "@mui/icons-material/AdsClick";
 import EventIcon from "@mui/icons-material/Event";
 import AvTimerIcon from "@mui/icons-material/AvTimer";
 import { formatDateMMMMDDYYYY, getRemainingDays } from "../utils/utils";
-import { accountList } from "../config/account/accountList";
 import { Link } from "react-router";
+import { useAccountList } from "../contexts/AccountListContext";
 
 const TaskCard = ({ task }) => {
+    const { accountList } = useAccountList();
   const { mode } = useColorMode();
   const remainingDay = getRemainingDays(task.dueDate);
 
