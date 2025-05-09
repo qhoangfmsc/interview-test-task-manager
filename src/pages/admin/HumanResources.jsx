@@ -41,7 +41,7 @@ const HumanResources = () => {
   return (
     <Box sx={{ width: "100%" }}>
       <HeaderHR filter={filter} handleFilterChange={handleFilterChange} />
-      {data.length && (
+      {data.length > 0 && (
         <>
           <OverviewEmployee data={filteredData} />
           <DepartmentPerformance data={filteredData} />

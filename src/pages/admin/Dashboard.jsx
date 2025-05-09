@@ -36,7 +36,7 @@ export default function Dashboard() {
         filter={filter}
         handleFilterChange={handleFilterChange}
       />
-      {data.length && (
+      {data.length > 0 && (
         <>
           <OverrallDashboard data={data} filter={filter} />
           <div className="flex flex-col lg:flex-row lg:gap-4">
