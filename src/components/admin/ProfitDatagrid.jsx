@@ -67,7 +67,9 @@ export default function ProfitDatagrid({ data, filter }) {
       variant="outlined"
       sx={{
         my: 2,
-        height: 450,
+        px: 2,
+        pb: 2,
+        height: 500,
         width: "100%",
         display: "flex",
         flexDirection: "column",

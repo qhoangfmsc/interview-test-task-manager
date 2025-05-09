@@ -4,7 +4,7 @@ export default function HeaderDashboard({ filter, handleFilterChange }) {
   return (
     <div className="flex flex-col lg:flex-row gap-1 justify-between w-full text-2xl text-left font-bold text-shadow-lg mb-2">
       <div className="text-2xl text-left font-bold text-shadow-lg">
-        Company Revenue Overview
+        Company Revenue Overview (Over 5 years)
       </div>
       <ToggleButtonGroup
         color="primary"

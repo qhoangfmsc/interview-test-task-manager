@@ -1,0 +1,646 @@
+[
+  {
+    "month": "2023-05",
+    "totalEmployees": 138,
+    "newHires": 3,
+    "exits": 1,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 32,
+        "avgTasks": 66
+      },
+      {
+        "department": "IT",
+        "members": 26,
+        "avgTasks": 106
+      },
+      {
+        "department": "Marketing",
+        "members": 20,
+        "avgTasks": 70
+      },
+      {
+        "department": "HR",
+        "members": 14,
+        "avgTasks": 72
+      }
+    ]
+  },
+  {
+    "month": "2023-06",
+    "totalEmployees": 142,
+    "newHires": 5,
+    "exits": 1,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 32,
+        "avgTasks": 96
+      },
+      {
+        "department": "IT",
+        "members": 26,
+        "avgTasks": 123
+      },
+      {
+        "department": "Marketing",
+        "members": 21,
+        "avgTasks": 82
+      },
+      {
+        "department": "HR",
+        "members": 14,
+        "avgTasks": 96
+      }
+    ]
+  },
+  {
+    "month": "2023-07",
+    "totalEmployees": 145,
+    "newHires": 4,
+    "exits": 1,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 32,
+        "avgTasks": 103
+      },
+      {
+        "department": "IT",
+        "members": 27,
+        "avgTasks": 121
+      },
+      {
+        "department": "Marketing",
+        "members": 21,
+        "avgTasks": 68
+      },
+      {
+        "department": "HR",
+        "members": 15,
+        "avgTasks": 97
+      }
+    ]
+  },
+  {
+    "month": "2023-08",
+    "totalEmployees": 147,
+    "newHires": 4,
+    "exits": 2,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 32,
+        "avgTasks": 125
+      },
+      {
+        "department": "IT",
+        "members": 27,
+        "avgTasks": 102
+      },
+      {
+        "department": "Marketing",
+        "members": 21,
+        "avgTasks": 122
+      },
+      {
+        "department": "HR",
+        "members": 15,
+        "avgTasks": 71
+      }
+    ]
+  },
+  {
+    "month": "2023-09",
+    "totalEmployees": 148,
+    "newHires": 4,
+    "exits": 3,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 32,
+        "avgTasks": 89
+      },
+      {
+        "department": "IT",
+        "members": 27,
+        "avgTasks": 86
+      },
+      {
+        "department": "Marketing",
+        "members": 22,
+        "avgTasks": 121
+      },
+      {
+        "department": "HR",
+        "members": 16,
+        "avgTasks": 68
+      }
+    ]
+  },
+  {
+    "month": "2023-10",
+    "totalEmployees": 151,
+    "newHires": 5,
+    "exits": 2,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 33,
+        "avgTasks": 101
+      },
+      {
+        "department": "IT",
+        "members": 28,
+        "avgTasks": 92
+      },
+      {
+        "department": "Marketing",
+        "members": 23,
+        "avgTasks": 103
+      },
+      {
+        "department": "HR",
+        "members": 17,
+        "avgTasks": 70
+      }
+    ]
+  },
+  {
+    "month": "2023-11",
+    "totalEmployees": 153,
+    "newHires": 5,
+    "exits": 3,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 34,
+        "avgTasks": 89
+      },
+      {
+        "department": "IT",
+        "members": 28,
+        "avgTasks": 102
+      },
+      {
+        "department": "Marketing",
+        "members": 24,
+        "avgTasks": 125
+      },
+      {
+        "department": "HR",
+        "members": 17,
+        "avgTasks": 71
+      }
+    ]
+  },
+  {
+    "month": "2023-12",
+    "totalEmployees": 156,
+    "newHires": 6,
+    "exits": 3,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 35,
+        "avgTasks": 108
+      },
+      {
+        "department": "IT",
+        "members": 29,
+        "avgTasks": 125
+      },
+      {
+        "department": "Marketing",
+        "members": 24,
+        "avgTasks": 71
+      },
+      {
+        "department": "HR",
+        "members": 18,
+        "avgTasks": 87
+      }
+    ]
+  },
+  {
+    "month": "2024-01",
+    "totalEmployees": 159,
+    "newHires": 6,
+    "exits": 3,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 36,
+        "avgTasks": 91
+      },
+      {
+        "department": "IT",
+        "members": 29,
+        "avgTasks": 98
+      },
+      {
+        "department": "Marketing",
+        "members": 25,
+        "avgTasks": 70
+      },
+      {
+        "department": "HR",
+        "members": 19,
+        "avgTasks": 113
+      }
+    ]
+  },
+  {
+    "month": "2024-02",
+    "totalEmployees": 159,
+    "newHires": 3,
+    "exits": 3,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 36,
+        "avgTasks": 95
+      },
+      {
+        "department": "IT",
+        "members": 30,
+        "avgTasks": 95
+      },
+      {
+        "department": "Marketing",
+        "members": 25,
+        "avgTasks": 116
+      },
+      {
+        "department": "HR",
+        "members": 20,
+        "avgTasks": 92
+      }
+    ]
+  },
+  {
+    "month": "2024-03",
+    "totalEmployees": 159,
+    "newHires": 3,
+    "exits": 3,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 36,
+        "avgTasks": 81
+      },
+      {
+        "department": "IT",
+        "members": 30,
+        "avgTasks": 106
+      },
+      {
+        "department": "Marketing",
+        "members": 25,
+        "avgTasks": 70
+      },
+      {
+        "department": "HR",
+        "members": 20,
+        "avgTasks": 101
+      }
+    ]
+  },
+  {
+    "month": "2024-04",
+    "totalEmployees": 160,
+    "newHires": 3,
+    "exits": 2,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 37,
+        "avgTasks": 119
+      },
+      {
+        "department": "IT",
+        "members": 31,
+        "avgTasks": 73
+      },
+      {
+        "department": "Marketing",
+        "members": 26,
+        "avgTasks": 105
+      },
+      {
+        "department": "HR",
+        "members": 20,
+        "avgTasks": 116
+      }
+    ]
+  },
+  {
+    "month": "2024-05",
+    "totalEmployees": 163,
+    "newHires": 3,
+    "exits": 0,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 37,
+        "avgTasks": 97
+      },
+      {
+        "department": "IT",
+        "members": 32,
+        "avgTasks": 105
+      },
+      {
+        "department": "Marketing",
+        "members": 26,
+        "avgTasks": 85
+      },
+      {
+        "department": "HR",
+        "members": 21,
+        "avgTasks": 66
+      }
+    ]
+  },
+  {
+    "month": "2024-06",
+    "totalEmployees": 166,
+    "newHires": 5,
+    "exits": 2,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 38,
+        "avgTasks": 125
+      },
+      {
+        "department": "IT",
+        "members": 32,
+        "avgTasks": 91
+      },
+      {
+        "department": "Marketing",
+        "members": 26,
+        "avgTasks": 85
+      },
+      {
+        "department": "HR",
+        "members": 21,
+        "avgTasks": 96
+      }
+    ]
+  },
+  {
+    "month": "2024-07",
+    "totalEmployees": 170,
+    "newHires": 5,
+    "exits": 1,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 39,
+        "avgTasks": 69
+      },
+      {
+        "department": "IT",
+        "members": 32,
+        "avgTasks": 88
+      },
+      {
+        "department": "Marketing",
+        "members": 26,
+        "avgTasks": 115
+      },
+      {
+        "department": "HR",
+        "members": 21,
+        "avgTasks": 79
+      }
+    ]
+  },
+  {
+    "month": "2024-08",
+    "totalEmployees": 175,
+    "newHires": 5,
+    "exits": 0,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 40,
+        "avgTasks": 121
+      },
+      {
+        "department": "IT",
+        "members": 33,
+        "avgTasks": 69
+      },
+      {
+        "department": "Marketing",
+        "members": 27,
+        "avgTasks": 85
+      },
+      {
+        "department": "HR",
+        "members": 22,
+        "avgTasks": 111
+      }
+    ]
+  },
+  {
+    "month": "2024-09",
+    "totalEmployees": 176,
+    "newHires": 3,
+    "exits": 2,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 40,
+        "avgTasks": 73
+      },
+      {
+        "department": "IT",
+        "members": 34,
+        "avgTasks": 112
+      },
+      {
+        "department": "Marketing",
+        "members": 28,
+        "avgTasks": 116
+      },
+      {
+        "department": "HR",
+        "members": 23,
+        "avgTasks": 97
+      }
+    ]
+  },
+  {
+    "month": "2024-10",
+    "totalEmployees": 180,
+    "newHires": 6,
+    "exits": 2,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 41,
+        "avgTasks": 110
+      },
+      {
+        "department": "IT",
+        "members": 35,
+        "avgTasks": 121
+      },
+      {
+        "department": "Marketing",
+        "members": 29,
+        "avgTasks": 94
+      },
+      {
+        "department": "HR",
+        "members": 24,
+        "avgTasks": 65
+      }
+    ]
+  },
+  {
+    "month": "2024-11",
+    "totalEmployees": 183,
+    "newHires": 5,
+    "exits": 2,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 42,
+        "avgTasks": 117
+      },
+      {
+        "department": "IT",
+        "members": 35,
+        "avgTasks": 116
+      },
+      {
+        "department": "Marketing",
+        "members": 29,
+        "avgTasks": 123
+      },
+      {
+        "department": "HR",
+        "members": 24,
+        "avgTasks": 66
+      }
+    ]
+  },
+  {
+    "month": "2024-12",
+    "totalEmployees": 186,
+    "newHires": 4,
+    "exits": 1,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 42,
+        "avgTasks": 79
+      },
+      {
+        "department": "IT",
+        "members": 35,
+        "avgTasks": 92
+      },
+      {
+        "department": "Marketing",
+        "members": 29,
+        "avgTasks": 77
+      },
+      {
+        "department": "HR",
+        "members": 24,
+        "avgTasks": 125
+      }
+    ]
+  },
+  {
+    "month": "2025-01",
+    "totalEmployees": 188,
+    "newHires": 3,
+    "exits": 1,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 42,
+        "avgTasks": 107
+      },
+      {
+        "department": "IT",
+        "members": 35,
+        "avgTasks": 107
+      },
+      {
+        "department": "Marketing",
+        "members": 30,
+        "avgTasks": 73
+      },
+      {
+        "department": "HR",
+        "members": 24,
+        "avgTasks": 116
+      }
+    ]
+  },
+  {
+    "month": "2025-02",
+    "totalEmployees": 190,
+    "newHires": 3,
+    "exits": 1,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 43,
+        "avgTasks": 111
+      },
+      {
+        "department": "IT",
+        "members": 36,
+        "avgTasks": 86
+      },
+      {
+        "department": "Marketing",
+        "members": 30,
+        "avgTasks": 105
+      },
+      {
+        "department": "HR",
+        "members": 25,
+        "avgTasks": 120
+      }
+    ]
+  },
+  {
+    "month": "2025-03",
+    "totalEmployees": 193,
+    "newHires": 3,
+    "exits": 0,
+    "departmentStats": [
+      {
+        "department": "Sales",
+        "members": 43,
+        "avgTasks": 67
+      },
+      {
+        "department": "IT",
+        "members": 36,
+        "avgTasks": 116
+      },
+      {
+        "department": "Marketing",
+        "members": 30,
+        "avgTasks": 80
+      },
+      {
+        "department": "HR",
+        "members": 26,
+        "avgTasks": 89
+      }
+    ]
+  }
+]

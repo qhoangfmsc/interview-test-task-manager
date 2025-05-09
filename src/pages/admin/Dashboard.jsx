@@ -23,7 +23,7 @@ export default function Dashboard() {
         );
         setData(response.data);
       } catch (error) {
-        console.error("Error loading mock accounts:", error);
+        console.error("Error loading mock data:", error);
       }
     };
 
